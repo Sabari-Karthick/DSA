@@ -9,9 +9,7 @@ import java.util.List;
 /*
  * 
  * 
- * One approach is we can sort every element and group but it will be O( M * N LogN)
- * 
- * But if we sort the String and keep it as a key in the hashmap we can get O (M * N)
+ * O(N∗KlogK)+O(N)+O(N)=O(N∗KlogK) it is complexity 
  * https://leetcode.com/problems/group-anagrams/submissions/1308469612/
  */
 public class GroupAnagram {
