@@ -1,0 +1,7 @@
+package com.Reursion.Bactracking;
+
+public class N_Knights {
+	public static void main(String[] args) {
+
+	}
+}

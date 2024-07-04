@@ -1,0 +1,27 @@
+package strings;
+
+public class LongestSubString {
+	public static void main(String[] args) {
+		lengthOfLongestSubstring("h");
+	}
+	 public static int lengthOfLongestSubstring(String s) {
+		 
+		 
+		 
+		 
+		 StringBuilder n = new StringBuilder("ABA");
+	System.out.println(	n.indexOf(String.valueOf('A')));
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 return 0;
+	        
+	    }
+
+}

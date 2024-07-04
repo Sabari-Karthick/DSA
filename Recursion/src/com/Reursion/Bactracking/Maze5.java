@@ -1,0 +1,56 @@
+package com.Reursion.Bactracking;
+
+import java.util.Arrays;
+
+public class Maze5 {
+	public static void main(String[] args) {
+		boolean[][] maze = {
+				{true,true,true},
+				{true,true,true},
+				{true,true,true}
+		};
+		int[][] path = {
+				{0,0,0},
+				{0,0,0},
+				{0,0,0}
+		};
+		allDirections("", maze,path,1, 0, 0);
+	}
+
+	static void allDirections(String p,boolean maze[][],int[][] path,int step, int r, int c) {
+
+		
+		if(r==maze.length-1 && c==maze[0].length-1) {
+			System.out.println(p+" ");
+			path[r][c]=step;
+			for(int []a : path) {
+				System.out.println(Arrays.toString(a));
+			}
+			return ;
+		}
+		
+		if(!maze[r][c]) {
+			return ;
+		}
+		maze[r][c]=false;
+		path[r][c]=step;
+		if(r<maze.length-1) {
+			 allDirections(p+"D", maze, path,step+1, r+1, c);
+			
+		}
+		if(c<maze[0].length-1) {
+			 allDirections(p+"R", maze,path,step+1, r, c+1);
+		}
+		if(c>0) {
+		   	allDirections(p+"L", maze,path,step+1, r, c-1);
+		}
+		if(r>0) {
+		  allDirections(p+"U", maze,path,step+1, r-1, c) ;
+			
+		}
+		
+		maze[r][c]=true;
+		path[r][c]=0;
+		
+	}
+}

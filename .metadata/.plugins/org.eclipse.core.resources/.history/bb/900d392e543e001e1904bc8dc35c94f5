@@ -1,0 +1,8 @@
+package com.Cycle;
+//Given an unsorted integer array nums, return the smallest missing positive integer.
+//https://leetcode.com/problems/first-missing-positive/
+public class FirstMissingPositive {
+	public static void main(String[] args) {
+		int[] arr = {3,4,-1,1};
+	}
+}

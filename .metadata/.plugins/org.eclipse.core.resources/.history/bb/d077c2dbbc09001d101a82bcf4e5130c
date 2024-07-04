@@ -1,0 +1,16 @@
+package gfg;
+import java.util.Scanner;
+public class Patterns {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	System.out.println("Enter your name:");
+	String name =  sc.next();
+	char a[]=name.toCharArray();
+	for(int i=0;i<a.length;i++) {
+		System.out.println(a[i]);
+           
+	
+	}
+	sc.close();
+	}	
+}

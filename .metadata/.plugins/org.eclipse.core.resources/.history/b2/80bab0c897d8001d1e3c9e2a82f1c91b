@@ -1,0 +1,35 @@
+package com.binary;
+
+import java.util.Arrays;
+
+public class SplitArrayLargestSum {
+public static void main(String[] args) {
+	int nums[]= {7,2,5,10,8};
+	System.out.println(splitArray(nums, 2));
+}
+public static int splitArray(int[] nums, int k) {
+    int start = Arrays.stream(nums).max().getAsInt();
+    int end = Arrays.stream(nums).reduce(0,(c,e)->c+e);
+    while(start < end){
+        int mid = start +(end - start)/2;
+            int sum=0;
+            int pieces = 1;
+        for(int i : nums){
+            
+            if(sum+i>mid){
+                sum = i;
+                pieces++;
+            }else{
+                sum+=i;
+            }
+        }
+        if(pieces<=k){
+            end = mid;
+        }
+        else{
+            start=mid+1;
+        }
+    }
+    return start;
+}
+}

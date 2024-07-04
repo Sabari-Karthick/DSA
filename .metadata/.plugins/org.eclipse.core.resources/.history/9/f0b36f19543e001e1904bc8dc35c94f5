@@ -1,0 +1,7 @@
+package com.Cycle;
+
+public class FirstMissingPositive {
+	public static void main(String[] args) {
+		int[] arr = {};
+	}
+}

@@ -1,0 +1,30 @@
+package com.Reursion.Bactracking;
+
+public class N_Knights {
+	public static void main(String[] args) {
+
+	}
+	
+	static void solve(boolean[][] board,int r,int c,int knights) {
+		if(knights==0) {
+			display(board);
+			return;
+		}
+		
+		
+		
+	}
+	private static void display(boolean[][] board) {
+		 for (boolean[] bs : board) {
+			for(boolean b : bs) {
+				if(b) {
+					System.out.print("Q ");
+				}
+				else {
+					System.out.print("X ");
+				}
+			}
+			System.out.println();
+		}
+	}
+}

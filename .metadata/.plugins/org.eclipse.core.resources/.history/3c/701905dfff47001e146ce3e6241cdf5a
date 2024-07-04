@@ -1,0 +1,12 @@
+package com.stack;
+
+public class CustomStack {
+	
+	protected Object[] arr;
+	private static final int  DEFAULT_SIZE = 10;
+	
+	public CustomStack() {
+		arr= new Object[DEFAULT_SIZE];
+	}
+
+}

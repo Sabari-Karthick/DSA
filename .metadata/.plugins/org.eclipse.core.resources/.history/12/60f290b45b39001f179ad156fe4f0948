@@ -1,0 +1,37 @@
+package com.array.medium;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+//https://leetcode.com/problems/group-anagrams/
+/*
+ * 
+ * 
+ * One approach is we can sort every element and group but it will be O( M * N LogN)
+ * 
+ * But if we sort the String and keep it as a key in the hashmap we can get O (M * N)
+ * https://leetcode.com/problems/group-anagrams/submissions/1308469612/
+ */
+public class GroupAnagram {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String,ArayList<String>> map = new HashMap<>();
+        for(String s : strs){
+            char c[] = s.toCharArray();
+            Arrays.sort(c);
+            String key = new String(c);
+            if(!map.containsKey(key)){
+                map.put(key,new ArrayList<>());
+            }
+            map.get(key).add(s);
+        }
+        return new ArrayList<>(map.values());
+    }
+}

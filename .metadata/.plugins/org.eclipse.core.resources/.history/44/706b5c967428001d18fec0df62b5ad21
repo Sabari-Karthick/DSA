@@ -1,0 +1,36 @@
+package arrays;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TwoSum {
+	public static void main(String[] args) {
+	//Driver code 	
+	
+	int []arr= {1,2,4,6,9,3};
+	int target =10;
+	
+	System.out.println("The two sum indices are:");
+	int []targets =twoSum(arr, target);
+	for(int i : targets) {
+		System.out.println(i);
+	}
+	
+	}
+	public static int[] twoSum(int[] nums, int target) {
+		Map<Integer, Integer> Complements = new HashMap<>();//Create a hash map to hold the  complements as key and their respective index as values  
+		
+		for(int i=0;i<nums.length;i++) {//traverse the array to check the whether the element to be added(the complement of the iterative) is present in map
+	   Integer ComplementsIndex = Complements.get(nums[i]);
+	   if(ComplementsIndex!=null){
+		   return new int[]{i,ComplementsIndex};//get the index(value in map) for the value in the array
+	   }
+	   Complements.put(target-nums[i], i);//if the cuurent element does not exist as a key add its complement and index
+		}
+		
+		
+	return nums;
+	
+	      
+    }
+}

@@ -1,0 +1,56 @@
+package com.Reursion.Bactracking;
+/**
+ * @author _karthick
+ * 
+ * For each  Queen we need to find its right position we reduce the problem of N Queen into One Queen  
+ * 
+ *
+ */
+public class N_Queens {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	static int solve(boolean[][] board,int r) {
+		if(r==board.length) {
+			display(board);
+			return 1;
+		}
+		
+		int count = 0;
+		for(int c=0;c<board.length;c++) {
+			if(isSafe(board,r,c)) {
+				board[r][c]=true;
+				count+=solve(board, r+1);
+				board[r][c]=false;
+			}
+		}
+		
+		return count;
+		
+	}
+
+	private static boolean isSafe(boolean[][] board, int r, int c) {
+		for(int i=0;i<r;i++) {//since only the above rows  have the queens
+			//check vertical row
+			if(board[i][c]) {
+				return false; 
+			}
+		}
+		return false;
+	}
+
+	private static void display(boolean[][] board) {
+		 for (boolean[] bs : board) {
+			for(boolean b : bs) {
+				if(b) {
+					System.out.println("Q ");
+				}
+				else {
+					System.out.println("X ");
+				}
+			}
+		}
+	}
+}

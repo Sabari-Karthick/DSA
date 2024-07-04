@@ -1,0 +1,37 @@
+package com.stack;
+
+public class CustomStack {
+	
+	protected Object[] arr;
+	private static final int  DEFAULT_SIZE = 10;
+	
+	public CustomStack() {
+		this(DEFAULT_SIZE);//calling the constructor
+	}
+	
+	public CustomStack(int size) {
+		this.arr= new Object[size];
+	}
+
+	//we need a pointer now -> the top pointer -> which will keep track of the indexes
+	int top = -1;
+	
+	public boolean  push(Object data) {
+		if(isFull()) {
+			System.out.println("Stack is Full");
+			return false;
+		}
+		top++;
+		arr[top]=data;
+		return true;
+		
+	}
+
+	public boolean isFull() {
+		if(top == arr.length-1) {
+			return true;
+		}
+		
+		return false;
+	}
+}
