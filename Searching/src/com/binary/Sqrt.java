@@ -12,7 +12,7 @@ class Solution {
         int end = x/2;
         while(start <= end){
             int mid = start + (end - start)/2;
-            if((long)mid * mid > x){
+            if((long)mid * mid > x){//Here the long casting is used to manage the range int won't support for large numbers
                 end = mid-1;
             }else {
                 start = mid +1;
