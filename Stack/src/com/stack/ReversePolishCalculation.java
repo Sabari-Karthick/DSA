@@ -3,7 +3,7 @@ package com.stack;
 import java.util.Stack;
 //https://leetcode.com/problems/evaluate-reverse-polish-notation/description/?source=submission-noac
 public class ReversePolishCalculation {
-
+// the maximum number of operands 𝑘 k in the worst case would be approximately 𝑁 / 2 + 1 N/2+1, where 𝑁 N is the length of the array.
 }
 class Solutionx {
     public int evalRPN(String[] tokens) {
