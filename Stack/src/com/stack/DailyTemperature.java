@@ -3,7 +3,7 @@ package com.stack;
 import java.util.Stack;
 
 /**
- * 
+ * https://leetcode.com/problems/daily-temperatures/description/
  * 
  * A monotonic stack is a special data structure used in algorithmic problem-solving.
  * Monotonic Stack maintaining elements in either increasing or decreasing order. 
