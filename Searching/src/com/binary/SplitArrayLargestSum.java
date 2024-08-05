@@ -4,6 +4,7 @@ import java.util.Arrays;//Good Problem
 //Given an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized. 
 //Return the minimized largest sum of the split.
 //https://leetcode.com/problems/split-array-largest-sum/description/
+//Complexity O(N) + O(log S) * O(N) --> O(N log S) where s is the sum of array (Upper Bound /End Limit)
 public class SplitArrayLargestSum {
 public static void main(String[] args) {//find where the possible answers lie 
 	int nums[]= {7,2,5,10,8};
