@@ -30,6 +30,12 @@ package com.notes;
  *  If Something deals with ordering/sequence stacks and queues be used
  *  Store the answer till particular point and retrieve after sometime then stack will be a good choice over there
  *  
+ *  
+ * A monotonic stack is a special data structure used in algorithmic problem-solving.
+ * Monotonic Stack maintaining elements in either increasing or decreasing order. 
+ * It is commonly used to efficiently solve problems such as finding the next greater or smaller element in an array etc.
+ * 
+ * 
  */
 
 
