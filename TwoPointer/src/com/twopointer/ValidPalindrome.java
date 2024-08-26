@@ -1,7 +1,14 @@
 package com.twopointer;
 //https://leetcode.com/problems/valid-palindrome/description/
 
-//This problem does not purposefully require Sliding Window but it is better optimized with it.
+/**
+ * 
+ * Pattern Used: Two-pointer technique.
+ * Why Two-Pointer? 
+ * Efficient for comparing elements from both ends of the string and reducing time complexity to O(N).
+ * 
+ * 
+ */
 public class ValidPalindrome {
 
 }
