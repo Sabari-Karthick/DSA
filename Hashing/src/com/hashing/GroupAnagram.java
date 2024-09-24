@@ -1,4 +1,4 @@
-package com.array.medium;
+package com.hashing;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +18,7 @@ public class GroupAnagram {
 	}
 }
 
-class Solution {
+class Solution237498234 {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String,ArrayList<String>> map = new HashMap<>();
         for(String s : strs){
