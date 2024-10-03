@@ -28,14 +28,14 @@ class Solution9fasfdajir {
         remIdxMap.put(0, -1);
 
         for (int i = 0; i < nums.length; i++) {
-            cur_sum = (cur_sum + nums[i]) % p;
+            cur_sum = (cur_sum + nums[i]) % p;//This doesn’t always capture the correct subarray, because we might need to remove subarrays in the middle of the array, not just from the beginning.
             // cur_sum - x = remainder --> x is the thing we need to remove 
-            int prefix = (cur_sum - rem + p) % p;
-            if (remIdxMap.containsKey(prefix)) {
+            int prefix = (cur_sum - rem + p) % p; // to keep the prefix positive
+            if (remIdxMap.containsKey(prefix)) {//if any subarray already has this prefix to be removed as its sum
                 int len = i - remIdxMap.get(prefix);  // length of the subarray to be removed
                 result = Math.min(result, len);
             }
-            remIdxMap.put(cur_sum, i);
+            remIdxMap.put(cur_sum, i);//the sum of elements till that point
         }
 
         return result == nums.length ? -1 : result;  // If no valid subarray, return -1
