@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * 
  * https://leetcode.com/problems/make-sum-divisible-by-p/description/
- * 
+ * O(N)
  */
 public class MakeSumDivisbleByP {
 
