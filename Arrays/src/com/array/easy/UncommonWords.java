@@ -1,18 +1,18 @@
 package com.array.easy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class UncommonWords {
 	public static void main(String[] args) {
-		String s1 = "this apple is sweet", s2 = "this apple is sour";
-		Set<String> s1Words = Arrays.stream(s1.split(" ")).collect(Collectors.toSet());
-		Map<String, Integer> hashMap = new HashMap<>();
+//		String s1 = "this apple is sweet", s2 = "this apple is sour";
+//		Set<String> s1Words = Arrays.stream(s1.split(" ")).collect(Collectors.toSet());
+//		Map<String, Integer> hashMap = new HashMap<>();
+//		int n = 7434;
+//       String[] split = String.valueOf(n).split("");
+//       List<Integer> list = Arrays.stream(split).map(Integer::parseInt).toList();
 	}
 }
 
