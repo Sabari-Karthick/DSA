@@ -9,7 +9,7 @@ import java.util.Set;
  * O(M + n)
  * O(M)
  */
-public class LongestCommonPrefix {
+public class LengthOfLongestCommonPrefix {
 
 }
 
