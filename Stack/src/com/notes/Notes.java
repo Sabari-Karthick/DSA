@@ -36,6 +36,15 @@ package com.notes;
  * It is commonly used to efficiently solve problems such as finding the next greater or smaller element in an array etc.
  * 
  * 
+ * 
+ * Stack and ArrayDeque are both part of the Java Collections Framework, and 
+ * while they can both be used to create stack-like structures (Last-In-First-Out or LIFO)
+ * ArrayDeque is part of the Deque (Double Ended Queue) interface and not synchronized by default. It is generally faster and more efficient for non-threaded applications.
+ * Additionally, ArrayDeque can act as both a stack (using these methods) and a queue (using addLast() and removeLast()).
+ * 
+ * 
+ * 
+ * 
  */
 
 
