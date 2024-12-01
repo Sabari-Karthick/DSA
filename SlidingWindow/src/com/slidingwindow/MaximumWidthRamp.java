@@ -1,3 +1,6 @@
+package com.slidingwindow;
+
+
 /**
 * https://leetcode.com/problems/maximum-width-ramp/
 *
