@@ -5,6 +5,11 @@ package com.slidingwindow;
  * 
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
  * 
+ * To sell a stock on the ith day I'll choose a day which is minimum in the from 1 to (i-1)
+ * This problem can be done in a psedo DP way of remembering the minimum 
+ * 
+ * 
+ * The Sliding Window tries to find the perfect low starting price and selling price to max Profit
  * 
  */
 public class BestTimeToBuyAndSellAStock {
@@ -24,6 +29,18 @@ class Solution123gfsdg {
                 profit = Math.max(profit,currentProfit);
             }
                 r++;// at any cost we need to update the right
+        }
+        return profit;
+    }
+}
+
+class Solution23r {
+    public int maxProfit(int[] prices) {
+        int min = prices[0],profit = 0;
+        for(int i=1;i< prices.length ; i++){
+            int pro = prices[i] - min; // Find the profit by using the min
+            profit = Math.max(pro,profit);
+            min = Math.min(min,prices[i]);
         }
         return profit;
     }
