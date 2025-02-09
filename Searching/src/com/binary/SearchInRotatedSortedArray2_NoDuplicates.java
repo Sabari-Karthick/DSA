@@ -2,7 +2,7 @@ package com.binary;
 
 //Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
 //https://leetcode.com/problems/search-in-rotated-sorted-array/description/
-public class SearchInRotatedArray2_NoDuplicates {
+public class SearchInRotatedSortedArray2_NoDuplicates {
 	public static void main(String[] args) {
 		int arr[] = { 3, 3, 3, 1 };
 		System.out.println(search(arr, 1));
