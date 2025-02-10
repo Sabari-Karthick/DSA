@@ -15,7 +15,7 @@ public static boolean search(int[] nums, int target) {
     	if(nums[mid]==target) {
     		return true;
     	}
-    	if(nums[start]==nums[mid]&&nums[end]==nums[mid]) {//ignore the duplicates
+    	if(nums[start]==nums[mid]&&nums[end]==nums[mid]) {//ignore the duplicates //To reduce large duplicate span
     		start++;
     		end--;
     	}
