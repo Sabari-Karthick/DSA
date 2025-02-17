@@ -130,3 +130,18 @@ class Solution324529gnsdfo {
     }
 }
 
+
+//DP 1 
+class Solution245ymgsdt98 {
+    public int coinChange(int[] coins, int amount) {
+          int dp[] = new int[amount + 1];
+          Arrays.fill(dp,Integer.MAX_VALUE - 1);
+          dp[0] = 0;
+          for(int i = 0;i< coins.length ; i++){
+            for(int amt = coins[i] ; amt <= amount ; amt++){
+                dp[amt] = Math.min(dp[amt],1 + dp[amt - coins[i]]);
+            }
+          }
+          return dp[amount] == Integer.MAX_VALUE - 1 ? -1 : dp[amount];
+    }
+}
