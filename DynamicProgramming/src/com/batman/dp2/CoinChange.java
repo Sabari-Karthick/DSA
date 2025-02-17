@@ -100,3 +100,33 @@ class Solution29379fsd {
         return dp[index][amount] = Math.min(notTake, take);
     }
 }
+
+//Tabulation
+//Bottum Up (From Base Case to End)
+class Solution324529gnsdfo {
+    public int coinChange(int[] coins, int amount) {
+        int[][] dp = new int[coins.length][amount + 1];
+        for (int i = 0; i < coins.length; i++) {
+            Arrays.fill(dp[i], Integer.MAX_VALUE - 1); // Invalid Value
+            dp[i][0] = 0; // Base Case For all coin if amount is 0 number of coins needed is also zero
+        }
+        for (int amt = 1; amt <= amount; amt++) {
+            if (amt % coins[0] == 0) {
+                dp[0][amt] = amt / coins[0];
+            }
+        }
+        for (int i = 1; i < coins.length; i++) {
+            for (int amt = 1; amt <= amount; amt++) {
+                int notTake = dp[i - 1][amt];
+                int take = Integer.MAX_VALUE - 1;
+                if (coins[i] <= amt) {
+                    take = 1 + dp[i][amt - coins[i]];
+                }
+
+                dp[i][amt] = Math.min(notTake, take);
+            }
+        }
+        return dp[coins.length - 1][amount] == Integer.MAX_VALUE - 1 ? -1 : dp[coins.length - 1][amount];
+    }
+}
+
