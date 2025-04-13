@@ -18,8 +18,8 @@ public class LargestRectangleHistogram {
 //        stack.push(0);
 //        int max = 0;
 //        for(int i=1;i<heights.length;i++){
-//            //conditon to calculate the max
-//            while(!stack.isEmpty()  && heights[i]< heights[stack.peek()])//the top is suppossed to be small if it is larger than the i calculate the max
+//            //condition to calculate the max
+//            while(!stack.isEmpty()  && heights[i]< heights[stack.peek()])//the top is supposed to be small if it is larger than the i calculate the max
 //            {
 //                max = getMax(heights,stack,max,i);
 //            }

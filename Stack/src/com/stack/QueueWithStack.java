@@ -2,6 +2,8 @@ package com.stack;
 
 import java.util.Arrays;
 
+
+//With one stack removal will always be O(N)
 public class QueueWithStack {//with one stack we cannnot create this we need two stacks -> but it is not efficient
 //there are two ways 
 //Insertion Efficient	 //Insertion takes constant by enque in the first and deque in the second - > in this insertion is O(1)  AND The deletion is O(N)

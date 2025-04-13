@@ -23,8 +23,8 @@ public class Insertion {
 	public static void main(String[] args) {
     
 		 int arr[] = {4,5,-2,0,1,3,2};
+		 System.out.println(Arrays.toString(arr));
 		 insertionSort(arr);
-	      System.out.println(Arrays.toString(arr));
 	}
 	
 	public static void insertionSort(int []arr) {
@@ -32,8 +32,10 @@ public class Insertion {
 				for (int j = i+1; j >0	; j--) {
 					if(arr[j]<arr[j-1]) {
 						swap(arr, j, j-1);
+						System.out.println(Arrays.toString(arr));
 					}
 					else {
+						System.out.println(Arrays.toString(arr));
 						break;
 					}
 				}

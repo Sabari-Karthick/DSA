@@ -22,7 +22,7 @@ public class PriorityQ {
 		
 		
 		//Queue<Double> q = new PriorityQueue<Double>((x,y)->(int)(y-x));
-		Queue<Double> q = new PriorityQueue<Double>(Collections.reverseOrder());//it gives a comparator 
+		Queue<Double> q = new PriorityQueue<>(Collections.reverseOrder());//it gives a comparator 
 		q.offer(2.5);
 		q.offer(3.0);
 		q.offer(4.0);

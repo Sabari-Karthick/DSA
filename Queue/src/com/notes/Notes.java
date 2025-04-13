@@ -21,6 +21,8 @@ package com.notes;
  *     It helps good in trees      
  *  
  */
-public class Notes {
 
+
+public class Notes {
+	
 }

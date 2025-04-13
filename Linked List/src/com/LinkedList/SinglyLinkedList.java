@@ -26,7 +26,7 @@ class LinkedList {
 	private Node tail;
 	private int size;
 
-	 class Node {
+	class Node {
 		int data;
 		Node next;
 
@@ -71,54 +71,54 @@ class LinkedList {
 			size++;
 		}
 	}
-	
+
 	public Node getNodeAtIndex(int index) {
 		Node node = head;
-		for(int i=0;i<index;i++) {
+		for (int i = 0; i < index; i++) {
 			node = node.next;
 		}
 		return node;
 	}
+
 	public int deleteFirst() {
-		if(head==null) {
+		if (head == null) {
 			return 0;
 		}
 		int data = head.data;
-		
+
 		head = head.next;
-		if(head==null) {
-			tail=null;
+		if (head == null) {
+			tail = null;
 		}
-		
+
 		size--;
 		return data;
 	}
-	
+
 	public int deleteLast() {
-		
-		if(size<=1)
-		{
+
+		if (size <= 1) {
 			return deleteFirst();
-			
+
 		}
-		Node secondLast = getNodeAtIndex(size-2);
-		int data =  secondLast.data;
-		secondLast.next=null;
-		tail=secondLast;
-		size--; 
+		Node secondLast = getNodeAtIndex(size - 2);
+		int data = secondLast.next.data;
+		secondLast.next = null;
+		tail = secondLast;
+		size--;
 		return data;
 	}
-	
+
 	public int deleteAtIndex(int index) {
-		if(index==0) {
+		if (index == 0) {
 			return deleteFirst();
 		}
-		if(index==size-1) {
+		if (index == size - 1) {
 			return deleteLast();
-		} 
-		Node prev = getNodeAtIndex(index-1);
+		}
+		Node prev = getNodeAtIndex(index - 1);
 		int data = prev.next.data;
-		prev.next=prev.next.next;
+		prev.next = prev.next.next;
 		size--;
 		return data;
 	}

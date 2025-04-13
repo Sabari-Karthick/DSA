@@ -32,7 +32,7 @@ public class QuickSort {
 		System.out.println(Arrays.toString(arr));
 	}
 
-	static void quickSort(int arr[], int low, int high) {
+	static void quickSort(int[] arr, int low, int high) {
 		if (low >= high) {
 			return;
 		}

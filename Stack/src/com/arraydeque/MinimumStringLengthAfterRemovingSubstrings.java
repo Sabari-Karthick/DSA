@@ -15,14 +15,14 @@ public class MinimumStringLengthAfterRemovingSubstrings {
 
 class Solution {
     public int minLength(String s) {
-        Deque<Character> stk = new ArrayDeque<>();
-        stk.push(' ');// to avoid isEmpty check
+        Deque<Character> stk = new ArrayDeque<>(); // We are ideally using it as a stack
+        stk.offer(' ');// to avoid isEmpty check
 
         for(char c : s.toCharArray()){
              if((c == 'B' && stk.peek() == 'A') ||  (c == 'D' && stk.peek() == 'C')){
-                  stk.pop();
+                  stk.poll();
              }else{
-                stk.push(c);
+                stk.offerFirst(c);
              }
         }
         return stk.size()-1;

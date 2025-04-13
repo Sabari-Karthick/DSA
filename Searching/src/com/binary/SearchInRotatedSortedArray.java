@@ -4,8 +4,7 @@ package com.binary;
 public class SearchInRotatedSortedArray {
 public static void main(String[] args) {
 	int arr[]= {4,5,6,7,0,0,1,2};
-	System.out.println(search(arr, 14));
-	
+	System.out.println(search(arr, 0));
 }
 public static boolean search(int[] nums, int target) {
     int start = 0;

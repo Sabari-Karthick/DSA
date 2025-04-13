@@ -19,12 +19,12 @@ class Solution {
     public String longestDiverseString(int a, int b, int c) {
         Queue<int[]> queue = new PriorityQueue<>((x, y) -> y[1] - x[1]); // Max Heap
         if (a > 0)
-            queue.offer(new int[] { 'a', a });
+            queue.offer(new int[] { 'a', a }); // Here the first char will be casted to its int value (UniCode Value)
         if (b > 0)
             queue.offer(new int[] { 'b', b });
         if (c > 0)
             queue.offer(new int[] { 'c', c });
-
+        
         StringBuilder res = new StringBuilder();
         while (queue.size() > 0) {
             int[] cur = queue.poll();
