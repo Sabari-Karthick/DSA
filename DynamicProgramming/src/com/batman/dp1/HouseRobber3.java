@@ -30,7 +30,7 @@ public class HouseRobber3 {
         int rob = root.val + left[1] + right[1];
 
         // While Skipping we need to consider the max of the left and right to avoid the rob of left is smaller that nskip of left
-        int skip = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
+        int skip = Math.max(left[0], left[1]) + Math.max(right[0], right[1]); // Dont be greedy as if we skip the root robbing left and right is obvious but we should consider the skip as well.
 
         return   new int[]{rob, skip};
 
