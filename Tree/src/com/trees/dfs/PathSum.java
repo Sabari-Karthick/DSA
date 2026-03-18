@@ -18,6 +18,7 @@ public class PathSum {
 
         treeNode.right.left = new TreeNode(13);
         treeNode.right.right = new TreeNode(4);
+        treeNode.right.right.left = new TreeNode(5);
         treeNode.right.right.right = new TreeNode(1);
 
         System.out.println(Solution234gh4.hasPathSum(treeNode,22)); // true
@@ -62,21 +63,3 @@ class Solution234gh4 {
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
