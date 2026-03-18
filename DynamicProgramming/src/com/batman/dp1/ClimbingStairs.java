@@ -26,6 +26,28 @@ package com.batman.dp1;
  */
 public class ClimbingStairs {
 
+    public static void main(String[] args) {
+        System.out.println(climbStairs(4)); // 5
+    }
+
+    private static int climbStairs(int n) {
+        // Distinct ways is a clear sign of DP
+
+        // We have two options either jump 1 or 2
+        // So till two stairs our choice is same
+        if(n <= 2) return n; // As 0 means 0 ways, 1 means 1 ways , 2 means 2 ways [{1,1},{2}]
+
+        int prev1 = 1; // For First Step
+        int prev2 = 2; // For second Step
+
+        for(int i = 3 ; i <= n ; i++){
+            int current = prev1 + prev2; // Since we need all the possible ways
+            prev1 = prev2; // So for 3 // prev1 = 2 (2 ways) and prev2 = 3 (3 ways)
+            prev2 = current;
+        }
+        return  prev2;
+    }
+
 }
 
 
