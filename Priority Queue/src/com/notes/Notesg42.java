@@ -17,6 +17,6 @@ package com.notes;
  * 
  *
  */
-public class Notes {
+public class Notesg42 {
 
 }

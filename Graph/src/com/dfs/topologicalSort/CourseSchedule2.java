@@ -58,12 +58,7 @@ class Solution02N35 {
             }
         }
 
-
-
-        plan[index++] = course; // At this point we know the cour
-
-
-        // se is valid so we add it to the plan
+        plan[index++] = course; // At this point we know the course is valid so we add it to the plan
 
 
         visited.add(course); // as well as the tracker
