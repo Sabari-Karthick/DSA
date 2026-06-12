@@ -37,5 +37,5 @@ package com.notes;
  */
 
 
-public class Notes {
+public class Notes23n4jkb234 {
 }

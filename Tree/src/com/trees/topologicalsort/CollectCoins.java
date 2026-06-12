@@ -3,6 +3,42 @@ package com.trees.topologicalsort;
 import java.util.*;
 
 public class CollectCoins {
+    public static void main(String[] args) {
+        List<Integer> integers = Arrays.asList(9, 8, 7, 2, 3, 3);
+
+        int max2 = 0 , cost2 = 0;
+        for(int i=1;i<integers.size();i++){
+
+            int prev = integers.get(i-1);
+            int curr = integers.get(i);
+
+            max2 = Math.max(prev,max2);
+
+            if(max2 > curr){
+                cost2 += max2 - curr;
+            }
+
+        }
+
+        Collections.reverse(integers);
+
+        int cost = 0;
+
+        for(int i=1;i<integers.size();i++){
+
+            int prev = integers.get(i-1);
+            int curr = integers.get(i);
+
+            max2 = Math.max(prev,max2);
+
+            if(max2 > curr){
+                cost += max2 - curr;
+            }
+
+        }
+
+            System.out.println(Math.min(cost,cost2));
+    }
 }
 
 class Solution {
