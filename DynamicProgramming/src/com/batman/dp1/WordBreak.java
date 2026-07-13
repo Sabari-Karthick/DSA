@@ -23,10 +23,10 @@ public class WordBreak {
     // With Plain DFS we get Time Exceed . So We need memorization
     public static boolean wordBreak(String s, List<String> wordDict) {
 
-        if(memo.containsKey(s)) return memo.get(s);
+        if(memo.containsKey(s)) return memo.get(s); // Means we already went through this Branch
 
         if(wordDict.contains(s)){ // Avoid this by having a empty check plus running loop till the length
-            memo.put(s, true);
+            memo.put(s, true); // Whole word is valid means no branch needed
             return true;
         }
 
@@ -39,7 +39,7 @@ public class WordBreak {
             if (wordDict.contains(left)) {
                 // We need to now know whether the remaining part is valid
                 if (wordBreak(right, wordDict)) {
-                    memo.put(s, true); // Remember that the
+                    memo.put(s, true); // Remember that the we are storing the process we took so that we dont do do it again not the words for that is dictionary for
                     return true;
                 } // Else Continue the loop
             }
