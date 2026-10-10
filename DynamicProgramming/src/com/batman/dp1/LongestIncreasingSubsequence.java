@@ -1,5 +1,6 @@
 package com.batman.dp1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -38,6 +39,8 @@ public class LongestIncreasingSubsequence {
         System.out.println(longestIncreasingSubsequence2(new int[]{0, 1, 0, 3, 2, 3})); // 4
         System.out.println(longestIncreasingSubsequence2(new int[]{7, 7, 7, 7, 7, 7, 7})); // 1
         System.out.println(longestIncreasingSubsequence2(new int[]{4, 10, 4, 3, 8, 9})); // 3
+        System.out.println(longestIncreasingSubsequence3(new int[]{4, 10, 4, 3, 8, 9})); // 3
+        System.out.println(longestIncreasingSubsequence3(new int[]{10, 9, 2, 5, 3, 7, 101, 18})); // 4
     }
 
 
@@ -109,5 +112,42 @@ public class LongestIncreasingSubsequence {
         return dp[cur][prev + 1]; // Since for prev we have values from -1 to n-1
     }
 
+    // Instead for every n we again search all prev n which cost n x n we can optimize the search
+    private static int longestIncreasingSubsequence3(int[] arr) {
+        ArrayList<Integer> piles = new ArrayList<>();
+        for (int num : arr) {
+            makePile(piles, num);
+        }
+        return piles.size();
+    }
+
+    private static void makePile(ArrayList<Integer> piles, int num) {
+        // If WE Follow the solitare game logic we can arrange the numbers in a way that the top of each pile forms a increasing order
+        // Because we place the number over a pile if it is smaller or equal else we need a new pile
+        // and sine the tops are sorted we have a better search algo
+        int l = 0;
+        int r = piles.size(); // There is a possiblity that we can't find a pile thats we r is at n instead of n-1
+
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+
+            // We need to find a pile where the top is greater or equal to our num
+            if (piles.get(mid) < num) {
+                l = mid + 1;
+            }else {
+               r = mid;
+            }
+        }
+
+        if(r == piles.size()) {
+            // Means r didn't even moved and we dont have a pile
+            piles.add(num);
+        }else{
+            // r moved and we found the pild
+            piles.set(r,num);
+        }
+
+
+    }
 
 }
