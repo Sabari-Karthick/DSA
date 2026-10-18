@@ -27,6 +27,32 @@ public class TargetSum {
         return dp[i][sumIdx];
     }
 
+    // Nerds Way
+    public int findTargetSumWays2(int[] nums, int target) {
+        int totalSum = 0;
+        for (int num : nums) {
+            totalSum += num;
+        }
+
+        // Check for invalid mathematical states
+        if (Math.abs(target) > totalSum || (target + totalSum) % 2 != 0) {
+            return 0;
+        }
+
+        int subsetSum = (target + totalSum) / 2;
+        int[] dp = new int[subsetSum + 1];
+        dp[0] = 1; // 1 way to make sum 0
+
+        for (int num : nums) {
+            // Traverse backwards to avoid using the same number twice
+            for (int j = subsetSum; j >= num; j--) {
+                dp[j] += dp[j - num];
+            }
+        }
+
+        return dp[subsetSum];
+    }
+
     public static void main(String[] args) {
         System.out.println(new TargetSum().findTargetSumWays(new int[]{1, 1, 1, 1, 1}, 3)); // 5
         System.out.println(new TargetSum().findTargetSumWays(new int[]{1}, 1)); // 1
