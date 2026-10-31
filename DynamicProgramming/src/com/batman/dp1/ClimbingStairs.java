@@ -1,4 +1,25 @@
 package com.batman.dp1;
+
+
+/**
+ *
+ * The Flag: "Find the total number of distinct ways." Asking for total combinations built from smaller valid steps = DP.
+ * <p>
+ * The Intuition: To step onto stair i,
+ * where could my foot have just been?
+ * It could only have been on i-1 (a 1-step) or i-2 (a 2-step).
+ * So, the ways to get to i is just the sum of the ways to get to those two previous steps.
+ * <p>
+ * The Formula: dp[i] = dp[i-1] + dp[i-2]
+ * (Professor's note: Look familiar? It’s literally just the Fibonacci sequence!)
+ * <p>
+ * Known States: dp[1] = 1 (one way to climb 1 stair), dp[2] = 2 (two ways to climb 2 stairs).
+ * <p>
+ * Return: dp[n] (The top of the staircase).
+ */
+
+
+
 /**
  * 
  * 

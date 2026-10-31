@@ -1,5 +1,16 @@
 package com.batman.dp1;
 
+/**
+ * The Flag: "Find the maximum money" + "No adjacent houses". Optimization + constraints based on past choices = DP.
+ * <p>
+ * The Intuition: At any house i, I am forced into a binary choice. If I rob it, I must drop house i-1 and take the loot from i-2. If I skip it, I keep the best loot I had up to i-1.
+ * <p>
+ * The Formula: dp[i] = max(nums[i] + dp[i-2], dp[i-1])
+ * <p>
+ * Known States: Guard the doors first! Size 0? Return 0. Size 1? Return nums[0]. Then: dp[0] = nums[0], dp[1] = max(nums[0], nums[1]).
+ * <p>
+ * Return: dp[nums.length - 1] (The end of the street).
+ */
 public class HouseRobber {
     public static void main(String[] args) {
         System.out.println(Solution234b4h234m9.rob(new int[]{1,2,3,1})); // Output : 4
